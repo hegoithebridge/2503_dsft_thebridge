@@ -70,7 +70,7 @@ A continuación se presentan algunos de los comandos básicos que utilizaremos c
 - `git merge <nombre>`: Fusiona el branch especificado con el branch actual.
 
 
-[Esquema](/img/git_schema.PNG)
+![Esquema](./img/git_schema.PNG)
 
 ## 7. ¿Qué es GitHub?
 
