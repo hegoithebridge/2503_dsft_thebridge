@@ -4,14 +4,17 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 Ha HaHa ?Ha
 MetaCharacters (Need to be escaped):
 . ^ $ * + ? { } [ ] \ | ( )
-miguelnievas*com
-miguelnievas.com
-miguelnievasocom
-321-555-4321
+hegoigaritaonandia*com
+hegoigaritaonandia.com
+hegoigaritaonandiacom
+hegoigaritaonandia hola
+321--555-4321
 123.555.1234
 123*555*1234
 800-555-1234
 900-555-1234
+9005551234
+900055501234
 Mr. Scha2fer
 Mr Smith
 Ms Davis
@@ -22,5 +25,5 @@ Mr. ()
 cat
 mat
 pat
-bat
+bat 
 at
