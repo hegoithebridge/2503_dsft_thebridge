@@ -1,6 +1,6 @@
 class Barco():
-	amarre = 'Barcelona'
-	eslora = 4
+	amarre = 'Bilbao'
+	eslora = 10
 
 class Tablero():
 	jugadores = 4
