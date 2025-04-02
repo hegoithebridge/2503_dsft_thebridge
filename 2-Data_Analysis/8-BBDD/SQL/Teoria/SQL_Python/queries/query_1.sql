@@ -1,2 +1,2 @@
 SELECT * 
-FROM tracks
+FROM tracks;
