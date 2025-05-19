@@ -33,37 +33,8 @@ def book_by_id():
     else:
         abort(404, 'You must provide an id.')
 
-# 3.Ruta para obtener un libro concreto mediante su título como parámetro en la llamada utilzando al final del endpoint <string:title>@app.route('/v1/book_by_id', methods=['GET'])
-@app.route('/v1/book_by_title/<string:title>', methods=['GET'])
-def book_by_name(title):
-    # titulo = title
-    for book in books:
-        if book['title'] == title:
-            return book
 
-    
-# 4.Ruta para obtener un libro concreto mediante su titulo dentro del cuerpo de la llamada
-@app.route('/v1/book_by_title_args/', methods=['GET'])
-def book_by_title():
-    if 'title' in request.args:
-        title = request.args.get('title')
-
-        for book in books:
-            if book['title'] == title:
-                return book
-    
-    else:
-        return 'You must provide a title argument.'
-    
-# 5.Ruta para añadir un libro mediante un json en la llamada
-@app.route('/v1/add_book/', methods=['POST'])
-def add_book():
-    new_book = request.get_json()
-    books.append(new_book)
-
-    return books
-
-# 6.Ruta para añadir un libro mediante parámetros
+# 3.Ruta para añadir un libro mediante parámetros
 @app.route('/v1/add_book_params/', methods=['POST'])
 def add_book_params():
     id = request.args.get('id')
@@ -75,7 +46,7 @@ def add_book_params():
     new_book = {}
     new_book['id'] = id
     new_book['title'] = title
-    new_book['auhtor'] = author
+    new_book['author'] = author
     new_book['first_sentence'] = first_sentence
     new_book['published'] = published
 
@@ -85,7 +56,7 @@ def add_book_params():
 
 
 
-# 7.Ruta para modificar un libro
+# 4.Ruta para modificar un libro
 @app.route('/v1/modify_book/', methods=['PUT'])
 def modify_book():
     id = int(request.args.get('id'))
@@ -97,7 +68,7 @@ def modify_book():
 
     return books
 
-# 8.Ruta para eliminar un libro
+# 5.Ruta para eliminar un libro
 @app.route('/v1/delete_book/', methods=['DELETE'])
 def delete_book():
     id = int(request.args.get('id'))
