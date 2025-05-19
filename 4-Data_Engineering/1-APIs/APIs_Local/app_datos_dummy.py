@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, abort
 from datos_dummy import books
 
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
@@ -77,7 +78,9 @@ def delete_book():
         if book['id'] == id:
             books.remove(book)
 
-    return books
+    #return books
+    return jsonify(books)
+
 
 
 
