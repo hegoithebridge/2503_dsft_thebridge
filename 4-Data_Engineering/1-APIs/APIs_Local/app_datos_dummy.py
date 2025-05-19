@@ -81,6 +81,14 @@ def delete_book():
     #return books
     return jsonify(books)
 
+# 6.Ruta para añadir un libro mediante un json en la llamada
+@app.route('/v1/add_book/', methods=['POST'])
+def add_book():
+    new_book = request.get_json()
+    books.append(new_book)
+
+    return books
+
 
 
 
